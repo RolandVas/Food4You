@@ -1,0 +1,31 @@
+mat-card {
+    position: relative;
+    background-color: aliceblue;
+    margin-bottom: 16px;
+
+    
+    p{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(227, 240, 252);
+    }
+}
+
+mat-card-actions {
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    font-size: 1.5rem;
+}
+
+mat-card-title {
+    font-size: 1.2rem;
+}
+
+.bg1{
+    display: flex;
+}

@@ -1,0 +1,15 @@
+img {
+    height: 60px;
+}
+
+.mid {
+    img {
+        height: 30px;
+    }
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}

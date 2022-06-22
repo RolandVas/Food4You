@@ -1,1 +1,22 @@
-<p>restaurant works!</p>
+<div class="bg1">
+<div class="dish-container">
+<h1>Luitpold Lounge</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, illo nemo quaerat facilis, labore cumque neque ad excepturi recusandae, dolore ut mollitia ipsa perspiciatis sint architecto. Suscipit quidem harum dolorum.</p>
+
+<h2 class="click" (click)="show=!show">Beliebte Gerichte</h2>
+
+<div *ngIf="show">
+<mat-card *ngFor="let card of items.dish">
+    <mat-card-title>{{ card.title }}</mat-card-title>
+    <mat-card-content>{{ card.description }}</mat-card-content>
+    <p>{{ card.price }} €</p>
+    <mat-card-actions (click)="addToCart(card)">+</mat-card-actions>
+</mat-card>
+</div>
+
+</div>
+
+<app-cart></app-cart>
+
+</div>
+

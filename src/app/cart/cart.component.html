@@ -1,1 +1,22 @@
-<p>cart works!</p>
+<div class="cart-bg">
+
+    <p class="head">Warenkorb</p>
+    
+
+    <div class="cart">
+        <p *ngIf="cartService.show">Fülle deinen Warenkorb</p>
+        <mat-card *ngFor="let item of cartService.cart.cartItems; let i = index">
+            {{ item.amount }} X
+            {{ item.title }}
+            {{ item.price*item.amount }} €
+            <div>
+                <mat-icon (click)="addAmount(item)">add</mat-icon>
+                <mat-icon (click)="removeAmount(item)">remove</mat-icon>
+                <mat-icon (click)="deleteAmount(i)">delete</mat-icon>
+            </div>
+            
+        </mat-card>
+        <mat-card>Summe: {{ cartService.price }} €</mat-card>
+       
+    </div>
+</div>
